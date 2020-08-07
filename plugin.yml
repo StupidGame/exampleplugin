@@ -1,0 +1,19 @@
+name: mabodoufu
+main: matsuo\mabodoufu\main
+version: 1.0.0
+api: 3.11.0
+author: matsuo877
+commands:
+ jointeam:
+  aliases:
+      - jt
+  description: チームに参加
+  usage: "/jointeam"
+  permission: exampleplugin.command.jointeam
+  
+  maketeam:
+  aliases:
+      - mt
+  description: チームを作成
+  usage: "/maketeam"
+  permission: exampleplugin.command.maketeam
