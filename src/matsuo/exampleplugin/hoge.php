@@ -8,7 +8,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use matsuo\TeamAPI\TeamAPI;
 
-class aaa extends PluginBase{
+class hoge extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         switch($command->getName()){
           case "maketeam":

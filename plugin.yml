@@ -1,5 +1,5 @@
 name: exampleplugin
-main: matsuo\exampleplugin\aaa
+main: matsuo\exampleplugin\hoge
 version: 1.0.0
 api: 3.11.0
 author: matsuo877
