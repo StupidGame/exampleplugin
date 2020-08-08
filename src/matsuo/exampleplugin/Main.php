@@ -1,6 +1,6 @@
 <?php
 
-namespace matsuo\mabodoufu;
+namespace matsuo\exampleplugin;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
