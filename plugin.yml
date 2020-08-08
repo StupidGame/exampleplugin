@@ -1,5 +1,5 @@
-name: mabodoufu
-main: matsuo\mabodoufu\main
+name: exampleplugins
+main: matsuo\exampleplugin\main
 version: 1.0.0
 api: 3.11.0
 author: matsuo877
