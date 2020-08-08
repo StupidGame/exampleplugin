@@ -1,5 +1,5 @@
 name: exampleplugin
-main: matsuo\exampleplugin\Main
+main: matsuo\exampleplugin\aaa
 version: 1.0.0
 api: 3.11.0
 author: matsuo877
