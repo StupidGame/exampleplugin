@@ -10,8 +10,7 @@ commands:
    description: チームに参加
    usage: "/jointeam"
    permission: exampleplugin.command.jointeam
-  
-   maketeam:
+  maketeam:
     aliases:
       - mt
     description: チームを作成

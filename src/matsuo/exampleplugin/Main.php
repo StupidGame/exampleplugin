@@ -12,10 +12,13 @@ class Main extends PluginBase{
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         switch($command->getName()){
           case "maketeam":
-            $form = Server::getInstance()->getPluginManager()->getPlugin('FormAPI')->createCustomForm(function($player, $data) use($playerName){$player->sendmessage("$data");});
-            $form->setTitle('テスト');
-            $form->addLavel('test');
-            $form->addImput("" , "チーム名を入力");
+            $forma = Server::getInstance()->getPluginManager()->getPlugin('FormAPI')->createCustomForm(function($player, $data){$player->sendMessage($data[1]);});
+            $forma->setTitle('テスト');
+            $forma->addLabel('test');
+            $forma->addInput("" , "チーム名を入力");
+            $forma->sendToPlayer($sender->getPlayer());
+             return true;    
+             break;
             case "jointeam":
               $playerName = [];
               $players = Server::getInstance()->getOnlinePlayers();
@@ -23,14 +26,14 @@ class Main extends PluginBase{
                  $name = $player->getName();
                  $playerName[] = $name;
                } 
-                $form = Server::getInstance()->getPluginManager()->getPlugin('FormAPI')->createSimpleForm(function($player, $data) use($playerName){$player->sendMessage($playerName[$data]."を選択しました");});
-                $form->setTitle('タイトル');
-                $form->setContent('本文');
+                $formb = Server::getInstance()->getPluginManager()->getPlugin('FormAPI')->createSimpleForm(function($player, $data) use($playerName){$player->sendMessage($playerName[$data]."を選択しました");});
+                $formb->setTitle('タイトル');
+                $formb->setContent('本文');
                 foreach($playerName as $value){
-                  $form -> addButton($value."を選択");
+                  $formb -> addButton($value."を選択");
                 }  
     
-                $form->sendToPlayer($sender->getPlayer());
+                $formb->sendToPlayer($sender->getPlayer());
                 return true;
                 default:
                 return false;
